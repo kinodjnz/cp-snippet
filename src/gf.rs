@@ -41,7 +41,7 @@ where
         );
     }
     fn sub(mut self, other: Self) -> Self {
-        self.add_assign(other);
+        self.sub_assign(other);
         self
     }
     fn sub_assign(&mut self, other: Self) {
@@ -171,4 +171,5 @@ fn test_gf() {
     let d = 8432455.into();
     //let r: GFp = (a * b + c) / d;
     assert_eq!((a * b + c) / d, 79639022.into());
+    assert_eq!(b - a, 999650988.into());
 }
